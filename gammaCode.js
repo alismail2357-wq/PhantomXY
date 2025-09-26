@@ -70,10 +70,9 @@ function checkTime(timingString) {
 
 
 
- //COLLECT
-    charPress("c",false,()=>{
+     charPress("s",false,()=>{
   
-  const taskList = document.getElementsByClassName("ui-widget-content jqgrow ui-row-ltr")
+      const taskList = document.getElementsByClassName("ui-widget-content jqgrow ui-row-ltr")
   for (task of taskList){
   let timingString=task.children[13].innerText
     if(checkTime2Minutes(timingString)==true) {
@@ -81,6 +80,12 @@ function checkTime(timingString) {
   }
 }
 
+
+})
+
+
+     charPress("d",false,()=>{
+  
     const claimBtn = document.querySelector("#claimTask")
     claimBtn.click()
      setTimeout(()=>{
@@ -92,12 +97,17 @@ function checkTime(timingString) {
       setTimeout(()=>{
           const success=document.querySelector("body > div.bootbox.modal.fade.bootbox-alert.in > div > div > div.modal-footer > button")
           success.click()
-      },150)
-  },150)
-  },130)
+      },250)
+  },350)
+  },350)
 })
 
-   charPress("s",false,()=>{
+
+ 
+
+
+
+   charPress("x",false,()=>{
   
 let communes = document.getElementsByClassName('select2-chosen')
 let communeValue=communes[1].innerText 
@@ -233,14 +243,9 @@ if (theCase.value === "Constantine El Gamas") {
   theCase.value = "El Gamas";
 }
 
-
-
-
-
-
-
-
-
+if (theCase.value === "Les Eucaliptus  Cherarba") {
+  theCase.value = "Les Eucaliptus";
+}
 
 
 
@@ -255,7 +260,7 @@ if (theCase.value === "Constantine El Gamas") {
  
 
     
-   
+
 
 
 
